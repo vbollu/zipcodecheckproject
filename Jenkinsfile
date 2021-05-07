@@ -13,6 +13,18 @@ pipeline {
              }
         }
         
+        stage("test") {
+            steps {
+                echo 'Testing...'
+                sh './mvnw test'
+            }
+            post {
+                always {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                }
+            }
+        }
+        
         stage("deploy") {
             steps {
                 echo 'deploying...'
