@@ -6,11 +6,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'predicting the future...'
-                 withMaven {
-                     sh 'mvn clean install test'
-                 }
-                
-               
+                sh 'mvn clean install test'
             }
             post {
                  always {
