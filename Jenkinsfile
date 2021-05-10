@@ -1,14 +1,15 @@
 pipeline {
     agent any
-    
+     tools {
+        maven 'apache-maven-3.3.9' 
+    }
     stages {
         
         stage("build") {
-             withMaven {
-                    sh 'mvn clean install test'
-                }
+             
             steps {
                 echo 'predicting the future...'
+                sh 'mvn clean install test'
                
             }
             post {
