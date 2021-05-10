@@ -6,7 +6,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'predicting the future...'
-                sh './mvnw clean install test'
+               
             }
             post {
                  always {
@@ -18,7 +18,7 @@ pipeline {
         stage("test") {
             steps {
                 echo 'Testing...'
-                sh './mvnw test'
+            
             }
         }
 
