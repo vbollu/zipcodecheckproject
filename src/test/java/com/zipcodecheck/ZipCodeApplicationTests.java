@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.zipcodecheck.ZipCode;
 import com.zipcodecheck.ZipCodeFinder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @SpringBootTest
 class ZipCodeApplicationTests {
@@ -17,6 +19,12 @@ class ZipCodeApplicationTests {
 //	@Test
 //	void contextLoads() {
 //	}
+	
+	@Bean
+	public ZipCodeFinder zipCodeFinder() {
+		// set properties, etc.
+		return new ZipCodeFinder();
+	}
 	
 	@Test
 	void test1() {
