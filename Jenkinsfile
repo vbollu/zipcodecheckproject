@@ -2,16 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage("build") {
-            steps {
-                echo 'predicting the future...'
-            }
-            post {
-                 always {
-                     
-                 }
-             }
-        }
+        
         
         stage("test") {
             steps {
