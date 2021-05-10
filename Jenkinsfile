@@ -4,11 +4,12 @@ pipeline {
     stages {
         
         stage("build") {
-            steps {
-                echo 'predicting the future...'
-                withMaven {
+             withMaven {
                     sh 'mvn clean install test'
                 }
+            steps {
+                echo 'predicting the future...'
+               
             }
             post {
                  always {
