@@ -10,11 +10,24 @@ pipeline {
             }
             post {
                  always {
-                     junit '**/target/surefire-reports/TEST-*.xml'
-                      jiraSendBuildInfo site: 'vbollu-jenkins-test.atlassian.net', branch:'JIT-5-Test-branch'
+                     jiraSendBuildInfo site: 'vbollu-jenkins-test.atlassian.net', branch:'JIT-5-Test-branch'
                  }
              }
         }
+        
+        stage("test") {
+            steps {
+                echo 'Testing...'
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                   
+                }
+            }
+        }
+
         
         
         stage("deploy") {
