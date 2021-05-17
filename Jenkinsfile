@@ -10,6 +10,7 @@ pipeline {
             }
             post {
                  always {
+                      junit '**/target/surefire-reports/TEST-*.xml'
                       jiraSendBuildInfo site: 'vbollu-jenkins-test.atlassian.net', branch:'JIT-6-Test-branch'
                  }
              }
