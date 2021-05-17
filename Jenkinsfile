@@ -6,11 +6,11 @@ pipeline {
         stage("build") {
             steps {
                 echo 'predicting the future...'
-                sh 'mvn clean install test'
+                sh 'mvn clean install'
             }
             post {
                  always {
-                      jiraSendBuildInfo site: 'vbollu-jenkins-test.atlassian.net', branch:'JIT-5-Test-branch'
+                      jiraSendBuildInfo site: 'vbollu-jenkins-test.atlassian.net', branch:'JIT-6-Test-branch'
                  }
              }
         }
