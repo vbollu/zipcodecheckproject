@@ -6,10 +6,11 @@ pipeline {
         stage("build") {
             steps {
                 echo 'predicting the future...'
-                sh 'mvn clean install'
+                sh 'mvn clean install test'
             }
             post {
                  always {
+                     junit '**/target/surefire-reports/TEST-*.xml'
                       jiraSendBuildInfo site: 'vbollu-jenkins-test.atlassian.net', branch:'JIT-6-Test-branch'
                  }
              }
