@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                echo 'predicting the future...'
+                mvn clean install
             }
             post {
                  always {
