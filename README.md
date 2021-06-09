@@ -13,8 +13,3 @@ Or
 
 Import to eclipse and directly run the ZipCodeApplication.java by passing input through comman line arguments.
 
-<<<<<<< HEAD
-=======
-  
-  
->>>>>>> 10f4798 (NJ-10)
