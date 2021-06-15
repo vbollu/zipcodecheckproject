@@ -2,14 +2,14 @@ pipeline {
     agent any
     
     tools {
-        maven 'maven678'
+        maven 'maven'
        
     }
     
     stages {
         stage("build") {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn clean installs'
             }
             post {
                  always {
