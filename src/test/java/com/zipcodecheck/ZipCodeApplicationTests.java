@@ -26,7 +26,7 @@ class ZipCodeApplicationTests {
 		assertEquals(3,list.size());
 		assertTrue(list.toString().contains("[94133,94133]"));
 		assertTrue(list.toString().contains("[94200,94299]"));
-		assertTrue(list.toString().contains("[94600,9469jh9]"));
+		assertTrue(list.toString().contains("[94600,94699]"));
 	}
 	
 	@Test
