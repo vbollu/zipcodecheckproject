@@ -9,10 +9,9 @@ pipeline {
 
   }
   post {
-    always {
-      echo 'No converter for Publisher: com.atlassian.jira.cloud.jenkins.buildinfo.freestyle.FreeStylePostBuildStep'
-    }
-
+      always {
+                jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
+             }
   }
   triggers {
     pollSCM('* * * * *')
