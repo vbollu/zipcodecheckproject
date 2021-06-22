@@ -17,9 +17,8 @@ pipeline {
 
             }
             post {
+                always {                   
 
-                 always {
-                   
                      jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
                     
                  }
