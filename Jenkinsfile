@@ -12,8 +12,7 @@ pipeline {
                 sh 'mvn clean install'
             }
             post {
-                 always {
-                   
+                always {                   
                      jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
                  }
              }
