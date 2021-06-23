@@ -1,11 +1,6 @@
 pipeline {
-    agent any
-    
-    tools {
-        maven 'maven'
-       
-    }
-    
+  agent any
+     
     stages {
         stage("build") {
             steps {
@@ -29,5 +24,5 @@ pipeline {
                 }
             }
         }
-    }
+
 }
