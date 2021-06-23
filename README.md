@@ -8,3 +8,7 @@ Steps to run:
  java -jar <generated jar name> "[94133,94133] [94200,94299] [94600,94699]"
 
 Also added JUnit test case inside src/test/java/com/zipcodecheck/ZipCodeApplicationTests.java
+
+Or
+
+Import to eclipse and directly run the ZipCodeApplication.java by passing input through comman line argument
