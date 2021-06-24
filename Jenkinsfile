@@ -17,7 +17,7 @@ pipeline {
             }
             post {
                 always {                   
-
+                     junit '**/target/surefire-reports/TEST-*.xml'
                      jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
                     
                  }
