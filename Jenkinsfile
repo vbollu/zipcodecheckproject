@@ -18,6 +18,7 @@ pipeline {
             post {
                 always {                   
                      junit '**/target/surefire-reports/TEST-*.xml'
+                  jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
                      
                     
                  }
@@ -27,6 +28,11 @@ pipeline {
         stage("deploy") {
             steps {
                 echo 'deploying...'
+            }
+          post {
+                always {
+                    jiraSendDeploymentInfo site: 'vbollu-jenkins-test.atlassian.net', enableGating: false, environmentId: 'jenkins-testing-prod-1', environmentName: 'jenkins-testing-prod-1', environmentType: 'production'
+                }
             }
             
         }
