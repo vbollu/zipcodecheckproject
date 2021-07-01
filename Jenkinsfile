@@ -32,6 +32,7 @@ pipeline {
           post {
                 always {
                     jiraSendDeploymentInfo site: 'nsurendran1991.atlassian.net', enableGating: true, environmentId: 'jenkins-testing-prod-1', environmentName: 'jenkins-testing-prod-1', environmentType: 'production'
+                    checkGatingStatus environmentId: 'jenkins-testing-prod-1', site: 'nsurendran1991.atlassian.net'
                 }
             }
             
