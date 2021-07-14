@@ -15,8 +15,7 @@ pipeline {
                 sh 'mvn clean install'
             }
             
-        }
-       
+        }       
         stage("deploy") {
             steps {
                 echo 'deploying...'
