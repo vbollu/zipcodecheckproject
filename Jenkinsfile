@@ -4,9 +4,7 @@ properties([[$class: 'HudsonNotificationProperty',
 
 pipeline {
   agent any
-  node {
-    checkout scm
-}
+
   environment {
     GIT_URL = "${env.GIT_URL}"
   }
@@ -19,7 +17,7 @@ pipeline {
         stage("build") {
             steps {
                 sh 'mvn clean install'
-              echo ${env.GIT_URL}
+              echo '${env.GIT_URL}'
             }
             
         }       
