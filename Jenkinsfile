@@ -19,6 +19,7 @@ pipeline {
         stage("build") {
             steps {
                 sh 'mvn clean install'
+              echo ${env.GIT_URL}
             }
             
         }       
