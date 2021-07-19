@@ -4,6 +4,9 @@ properties([[$class: 'HudsonNotificationProperty',
 
 pipeline {
   agent any
+  node {
+    checkout scm
+}
   tools {
         maven 'maven'
        
