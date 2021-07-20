@@ -6,7 +6,9 @@ properties([[$class: 'HudsonNotificationProperty',
 pipeline {
   agent any
 
-  
+  environment {
+    GIT_URL = "${env.GIT_URL}"
+  }
   tools {
         maven 'maven'
        
