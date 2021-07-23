@@ -11,4 +11,8 @@ Also added JUnit test case inside src/test/java/com/zipcodecheck/ZipCodeApplicat
 
 Or
 
+ 
+
 Import to eclipse and directly run the ZipCodeApplication.java by passing input through comman line argument
+
+
