@@ -10,7 +10,9 @@ Steps to run:
 Also added JUnit test case inside src/test/java/com/zipcodecheck/ZipCodeApplicationTests.java
 
 Or
+
  
 
 Import to eclipse and directly run the ZipCodeApplication.java by passing input through comman line argument
+
 

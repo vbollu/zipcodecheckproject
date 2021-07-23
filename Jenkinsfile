@@ -1,12 +1,17 @@
+
+
 pipeline {
+
 
   agent any 
     stages {      
+
 
         stage("deploy") {
             steps {
                 echo 'deploying...'
             }
+
           post {
                 always { 
 
@@ -15,6 +20,7 @@ pipeline {
                 }
             }
             
+
         }
     }
 
