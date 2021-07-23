@@ -1,23 +1,5 @@
 pipeline {
-  agent any
-  tools {
-        maven 'maven'
-       
-    }
-     
-    stages {
-        stage("build") {
-            steps {
-                sh 'mvn clean install'
-            }
-            post {
-                always {                   
-                     jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
-                    
-                 }
-             }
-        }
-       
+  agent any       
         stage("deploy") {
             steps {
                 echo 'deploying...'
