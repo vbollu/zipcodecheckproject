@@ -1,19 +1,22 @@
 pipeline {
-  agent any
-  stages {
-    stage('Checkout Scm') {
-      steps {
-        git 'https://github.com/nsurendran1991/demo.git'
-      }
+
+  agent any 
+    stages {      
+
+        stage("deploy") {
+            steps {
+                echo 'deploying...'
+            }
+          post {
+                always { 
+
+                    jiraSendDeploymentInfo site: 'nsurendran1991.atlassian.net', enableGating: false, environmentId: 'jenkins-testing-prod-1', environmentName: 'staging', environmentType: 'staging'
+
+                }
+            }
+            
+        }
     }
 
-  }
-  post {
-      always {
-                jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
-             }
-  }
-  triggers {
-    pollSCM('* * * * *')
-  }
 }
+
