@@ -5,6 +5,22 @@ pipeline {
 
   agent any 
     stages {      
+      
+      stage("build") {
+            steps {
+                echo 'deploying...'
+            }
+
+          post {
+                always { 
+
+                    jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
+
+                }
+            }
+            
+
+        }
 
 
         stage("deploy") {
