@@ -16,8 +16,7 @@ pipeline {
 
                     jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
                 }
-            }
-            
+            }            
       } 
 
         stage("deploy") {
