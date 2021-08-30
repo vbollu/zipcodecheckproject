@@ -8,7 +8,7 @@ pipeline {
       
       stage("build") {
             steps {
-                echo 'deploying...'
+                echo 'building...'
             }
             post {
                 always { 
